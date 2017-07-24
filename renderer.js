@@ -21,9 +21,8 @@ var onPrefsClicked3 = function() {
 }
 var onConsoleOpen = function() {
 
-
-
-	remote.getCurrentWindow().openDevTools();
+remote.getCurrentWindow().openDevTools();
+ 
 }
 
 var onPageReload = function() {
