@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>윈도우 프로그램</title>
+    <!-- Compiled and minified CSS -->
+    <script>
+    window.$ = window.jQuery = require('jquery');
+    window.Hammer = require('./hammer.js');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+  <!-- <div class="parallax-container">
+    <div class="parallax"><img src="./main01.jpg" style="display:block; transform: translate3d(-50%, 496px, 0px);"></div>
+  </div> -->
+  <div class="section white">
+    <div class="row container">
+      <h1 class="blue-text text-darken-2 row">윈도우 프로그램</h1>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>개발프레임워크</div>
+          <div class="collapsible-body"><span>Lorem <i></i>electron, node.js로 개발함</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+      </ul>
+      <div class="row col-12">Node.js 현재버전<script>document.write(process.versions.node)</script>, </div>
+      <div class="row col-12">chrome 현재버전<script>document.write(process.versions.chrome)</script>, </div>
+      <div class="row col-12">Electron <script>document.write(process.versions.electron)</script> </div>
+      <div class="row col-12">플랫폼 <script>document.write(process.platform)</script> </div>
+      <div class="row col-12">아키텍쳐 <script>document.write(process.arch)</script> </div>
+      <div class="row col-12">현재사용디렉토리 <script>document.write(process.cwd())</script> </div>
+      <div class="row col-12">프로세스 종료(0 : code생략, 1 : 코드까지종료)  process.exit </div>
+      <div class="row col-12">프로세스 pid <script>document.write(process.pid)</script> </div>
+      <div class="row col-12">프로세스 메모리 사용량을 바이트로 나타냄(리턴객체) <script>document.write(process.memoryUsage())</script> </div>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+    </div>
+  </div>
+   <!-- <div class="parallax-container">
+  <div class="parallax"><img src="./main02.jpg" style="display:block; transform: translate3d(-50%, 496px, 0px);"></div>
+   </div> -->
+  </body>
+  <script>
+      require('./renderer.js');
+      $('#modal1').modal();
+      $('.collapsible').collapsible();
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+      }
+</script>
+
+</html>
